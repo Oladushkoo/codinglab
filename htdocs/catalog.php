@@ -82,13 +82,13 @@
        </html>
        <?php
 
-
+// подключение к бд
        $db1 = new mysqli("localhost", "root", "root", "finndspecialist");
        if($db1->connect_error){
          die("Ошибка: " . $db1->connect_error);
        }
        $sql = "SELECT * FROM specialists";
-       
+       // вывод всех специалистов
        if($result = $db1->query($sql)){
          $rowsCount = $result->num_rows; // количество полученных строк
          echo "<p>Всего специалистов: $rowsCount</p>";
