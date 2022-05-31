@@ -82,7 +82,7 @@
 </div>
 
 </div>
-
+// выбрать специалиста
 	<form method="post" action="test.php">
 		<div class="container-fluid mt-3 element">
 			<p><strong></strong> Specify the gender of the specialist</p>
