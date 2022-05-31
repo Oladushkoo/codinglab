@@ -81,8 +81,7 @@
 </nav>
 </div>
 <?php
-/* Попытка подключения к серверу MySQL. Предполагая, что вы используете MySQL
- сервер с настройкой по умолчанию (пользователь root без пароля)  */
+/* подключаем базу данных */
 $link = mysqli_connect("localhost", "root", "root", "finndspecialist");
 
 // Проверка подключения
@@ -95,7 +94,7 @@ if($link === false){
 	$v3 = $_POST['v3']; // Вытаскиваем ответ на третий вопрос в переменную
 
 	$sql = 0; // результат будет в процентах правильных ответо
-
+  // через условия определяем что брать из бд
 	if ($v2== "3545" AND $v1== "Female" AND $v3== "1"  ){
 
   $sql = "SELECT * FROM specialists WHERE age>='35'  AND age<'45' AND gender='Female' AND topics='1'";
@@ -622,6 +621,7 @@ $sql = "SELECT * FROM specialists WHERE age>='25' AND age<'65' AND (gender='Male
 
 		$sql = "SELECT * FROM specialists WHERE age>='25' AND age<'65' AND (gender='Male' OR gender='Female') ";
 		}
+// выводим в виде таблицы
   if($result = mysqli_query($link, $sql)){
       if(mysqli_num_rows($result) > 0){
           echo "<table>";
