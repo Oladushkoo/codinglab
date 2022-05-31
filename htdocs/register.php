@@ -61,7 +61,7 @@
   <div class="container mt-4 m">
 
 
-
+// форма для регистрации
   <form class="gform register" method="post" action="register.php">
   	<?php include('errors.php'); ?>
     <div class="input-group">
