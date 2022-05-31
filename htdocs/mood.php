@@ -65,7 +65,7 @@
 </nav>
          </div>
 
-
+// карусель
    <div class=" container-fluid" style="width:30%;">
      <h3 align="center" class="supplace">Supporting place</h3>
      <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:90%;">
