@@ -1,4 +1,5 @@
 <?php
+
   session_start();
 
   if (!isset($_SESSION['username'])) {
@@ -11,6 +12,7 @@
   	header("location: login.php");
   }
 ?>
+// подключаем базу данных
 <?php include('server.php') ?>
 
 <!DOCTYPE html>
@@ -88,6 +90,7 @@
              <button class="close" title="Закрыть окно" onclick="swa2()"></button>
              <p>Online session with a psychologist</p>
              <br>
+		   // форма для запроса сессии с психологом (отправляет эти данные в базу данных)
              <form class="gform register" method="post" action="index.php">
               <?php include('errors.php'); ?>
                <div class="input-group">
@@ -108,7 +111,9 @@
              </form>
            </div>
          </div>
-         <section class="title1">
+	       
+	       // главная часть сайта
+         <section class="title1"> 
            <div class="container-fluid" >
                <div class="hi row">
            <div class="head1 col-lg-6 col-md-12 ">
@@ -160,6 +165,7 @@
              </div>
                </div>
                </section>
+	       // выбрать специалиста
                <section class="choosing">
                  <div class="row">
                  <div class="psy container-auto">
@@ -174,7 +180,7 @@ with whom you will be comfortable</h3>
                </div>
                </div>
                </section>
-
+// картинки для поднятия настроения
                <section class="click1">
                  <div class="row">
 
@@ -193,7 +199,7 @@ with whom you will be comfortable</h3>
 
                  </div>
                </section>
-
+// тесты
                <section class="choosing1">
                  <div class="row">
                  <div class="psy container-auto">
@@ -207,7 +213,7 @@ with whom you will be comfortable</h3>
                </div>
                </div>
                </section>
-
+// карта
 <h3 align="center">Our location</h3>
 <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/163/nur-sultan/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Нур‑Султан</a>
   <a href="https://yandex.kz/maps/163/nur-sultan/house/Y0gYcgdkQE0HQFtrfXx4c3libQ==/?indoorLevel=1&ll=71.405219%2C51.092492&source=wizgeo&utm_medium=mapframe&utm_source=maps&z=16.57" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Кабанбай Батыра, 60А/1 — Яндекс Карты</a>
@@ -252,6 +258,8 @@ function swa2(){
 </script>
 <footer class="footer">
   <div class="footer__addr">
+	  
+	  // футер
     <h1 class="">ZHANYNDA</h1>
 
     <h2>Contact</h2>
